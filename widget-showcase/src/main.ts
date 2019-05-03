@@ -6,10 +6,12 @@ import Injector from '@dojo/framework/widget-core/Injector';
 import global from '@dojo/framework/shim/global';
 import App from './App';
 import dojo from '@dojo/themes/dojo';
+import material from '@dojo/themes/material';
 import '@dojo/themes/dojo/index.css';
 
 const themes: { [index: string]: any } = {
 	dojo,
+	material,
 	vanilla: undefined
 };
 
