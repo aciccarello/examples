@@ -8,6 +8,7 @@ import App from './App';
 import dojo from '@dojo/themes/dojo';
 import material from '@dojo/themes/material';
 import '@dojo/themes/dojo/index.css';
+import '@dojo/themes/material/index.css';
 
 const themes: { [index: string]: any } = {
 	dojo,
