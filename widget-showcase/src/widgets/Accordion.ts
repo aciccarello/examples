@@ -32,13 +32,11 @@ export default class Accordion extends WidgetBase<AccordionProperties> {
 		const { onThemeChange } = this.properties;
 		this._currentTheme = theme;
 		onThemeChange(theme);
+		this.invalidate();
 	}
 
 	render() {
-		const {
-			themes,
-			onThemeChange
-		} = this.properties;
+		const { themes } = this.properties;
 
 		return w(AccordionPane, {
 			onRequestOpen: this._requestOpen,
@@ -51,7 +49,7 @@ export default class Accordion extends WidgetBase<AccordionProperties> {
 			}, [ w(ThemePane, {
 				themes,
 				currentTheme: this._currentTheme,
-				onThemeChange
+				onThemeChange: this._onThemeChange
 			}) ]),
 			w(TitlePane, {
 				title: 'Calendar',
